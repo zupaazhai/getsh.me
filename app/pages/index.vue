@@ -23,7 +23,7 @@ import { Input } from '@/components/ui/input'
             <form class="flex space-y-4 flex-col">
               <Input
                 class="max-w-lg flex-1 px-4"
-                placeholder="WHat are you finding?"
+                placeholder="Find bash script that can help you..."
                 type="search"
               />
               <Button type="submit">
