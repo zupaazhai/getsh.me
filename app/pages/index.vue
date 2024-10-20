@@ -1,4 +1,5 @@
 <script setup>
+import { Search } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 </script>
@@ -18,11 +19,15 @@ import { Input } from '@/components/ui/input'
               </p>
             </div>
           </div>
-          <div class="w-full max-w-sm space-y-2">
-            <form class="flex space-x-2">
-              <Input class="max-w-lg flex-1" placeholder="WHat are you finding?" type="search" />
+          <div class="w-full max-w-lg space-y-2">
+            <form class="flex space-y-4 flex-col">
+              <Input
+                class="max-w-lg flex-1 px-4"
+                placeholder="WHat are you finding?"
+                type="search"
+              />
               <Button type="submit">
-                <span class="mr-2">🔎</span>
+                <Search size="18" class="mr-2" />
                 Search
               </Button>
             </form>
