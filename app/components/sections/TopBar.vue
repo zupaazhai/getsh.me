@@ -1,5 +1,5 @@
 <script setup>
-import { Github, Armchair } from 'lucide-vue-next'
+import { Github, Armchair, Home } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import {
@@ -15,7 +15,7 @@ import {
   <header class="w-full border-b">
     <div class="container mx-auto px-4 h-14 flex items-center max-w-6xl">
       <a class="flex items-center justify-center" href="#">
-        <span class="ml-2 text-lg font-bold">getsh.me</span>
+        <Home />
       </a>
       <nav class="ml-auto flex gap-4 sm:gap-6">
         <ClientOnly>
