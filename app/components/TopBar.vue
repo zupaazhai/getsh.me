@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
         <span class="ml-2 text-lg font-bold">getsh.me</span>
       </a>
       <nav class="ml-auto flex gap-4 sm:gap-6">
-        <Button variant="outline">
+        <Button>
           <span class="mr-2">🧑🏻‍💻</span>
           Login
         </Button>
