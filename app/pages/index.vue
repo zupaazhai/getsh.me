@@ -95,14 +95,14 @@ const mockList = [
       </div>
     </section>
 
-    <Separator class="my-4" />
+    <Separator class="my-4 lg:my-8" />
 
     <TopList title="Top Download" :icon="Trophy" :items="mockList" />
 
-    <Separator class="my-4" />
+    <Separator class="my-4 lg:my-8" />
 
     <TopList title="Top Spark" :icon="Sparkles" :items="mockList" />
 
-    <Separator class="my-4" />
+    <Separator class="my-4 lg:my-8" />
   </main>
 </template>
