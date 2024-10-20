@@ -5,10 +5,7 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
 
   // https://nuxt.com/modules
-  modules: [
-    '@nuxthub/core',
-    '@nuxt/eslint'
-  ],
+  modules: ['@nuxthub/core', '@nuxt/eslint', '@nuxtjs/tailwindcss', 'shadcn-nuxt'],
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {},
@@ -31,5 +28,17 @@ export default defineNuxtConfig({
   },
 
   // https://devtools.nuxt.com
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './app/components/ui'
+  }
 })

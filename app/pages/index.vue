@@ -1,45 +1,34 @@
 <script setup>
-const runtimeConfig = useRuntimeConfig()
-const colors = ['#f87171', '#fb923c', '#fbbf24', '#facc15', '#a3e635', '#4ade80', '#34d399', '#2dd4bf', '#22d3ee', '#38bdf8', '#60a5fa', '#818cf8', '#a78bfa', '#c084fc', '#e879f9', '#f472b6', '#fb7185']
-const color = useState('color', () => colors[Math.floor(Math.random() * colors.length)])
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 </script>
 
 <template>
-  <div class="centered">
-    <h1 :style="{ color }">
-      {{ runtimeConfig.public.helloText }}
-    </h1>
-    <NuxtLink to="/" external>
-      refresh
-    </NuxtLink>
-  </div>
+  <main class="flex-1">
+    <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+      <div class="container mx-auto px-4 md:px-6 max-w-6xl">
+        <div class="flex flex-col items-center space-y-4 text-center">
+          <div class="space-y-6">
+            <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              getsh.me
+            </h1>
+            <div class="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 py-8">
+              <p>
+                Discover, create, and share powerful bash scripts to automate and boost your workflow
+              </p>
+            </div>
+          </div>
+          <div class="w-full max-w-sm space-y-2">
+            <form class="flex space-x-2">
+              <Input class="max-w-lg flex-1" placeholder="WHat are you finding?" type="search" />
+              <Button type="submit">
+                <span class="mr-2">🔎</span>
+                Search
+              </Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </template>
-
-<style scoped>
-.centered {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-h1 {
-  font-size: 32px;
-}
-@media (min-width: 768px) {
-  h1 {
-    font-size: 64px;
-  }
-}
-a {
-  color: #888;
-  text-decoration: none;
-  font-size: 18px;
-}
-a:hover {
-  text-decoration: underline;
-}
-</style>
