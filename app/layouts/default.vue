@@ -1,5 +1,5 @@
 <script setup>
-import TopBar from '@/components/TopBar.vue'
+import TopBar from '@/components/sections/TopBar.vue'
 
 useHead({
   title: 'getsh.me',
@@ -13,7 +13,7 @@ useHead({
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen font-mono">
+  <div class="flex flex-col min-h-screen">
     <TopBar />
     <slot />
   </div>

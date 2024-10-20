@@ -1,6 +1,7 @@
 <script setup>
-import { Github, AtSign, Armchair } from 'lucide-vue-next'
+import { Github, Armchair } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
 import {
   Dialog,
   DialogContent,
@@ -21,28 +22,32 @@ import {
           <Dialog>
             <DialogTrigger>
               <Button variant="outline">
-                <Armchair size="18" class="mr-2" />
-                Login
+                <Armchair size="18" class="mr-2" /> Login
               </Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>Login</DialogTitle>
+                <DialogTitle> Login </DialogTitle>
               </DialogHeader>
 
               <div class="flex flex-col space-y-2 py-4">
                 <div class="w-full">
                   <Button class="w-full" variant="outline">
-                    <Github size="20" class="mr-2" />
-                    Login with Github
+                    <Github size="20" class="mr-2" /> Login with Github
                   </Button>
                 </div>
-                <div class="w-full">
-                  <Button class="w-full" variant="outline">
-                    <AtSign size="20" class="mr-2" />
-                    Login with Gmail
-                  </Button>
-                </div>
+              </div>
+
+              <Separator />
+
+              <div class="w-full space-y-2">
+                <p class="text-sm text-center text-gray-600">
+                  Why we support only Github login?
+                </p>
+                <p class="text-xs px-4 text-center text-balance text-gray-400">
+                  We use GitHub Gists to store your bash files because it’s
+                  simple, secure, and reliable.
+                </p>
               </div>
             </DialogContent>
           </Dialog>
