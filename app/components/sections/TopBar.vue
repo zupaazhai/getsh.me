@@ -14,9 +14,9 @@ import {
 <template>
   <header class="w-full border-b">
     <div class="container mx-auto px-4 h-14 flex items-center max-w-6xl">
-      <a class="flex items-center justify-center" href="#">
+      <NuxtLink :to="{ name: 'index' }" class="flex items-center justify-center" href="#">
         <Home />
-      </a>
+      </NuxtLink>
       <nav class="ml-auto flex gap-4 sm:gap-6">
         <ClientOnly>
           <Dialog>
