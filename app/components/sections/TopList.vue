@@ -24,6 +24,8 @@ const props = defineProps({
           :title="item.title"
           :description="item.description"
           :downloads="item.downloads"
+          :username="item.username"
+          :slug="item.slug"
         />
       </div>
     </div>

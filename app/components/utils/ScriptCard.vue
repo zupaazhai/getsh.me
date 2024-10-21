@@ -11,12 +11,17 @@ const props = defineProps({
   title: String,
   description: String,
   downloads: Number,
+  username: String,
+  slug: String,
 })
 </script>
 
 <template>
   <Card class=" hover:bg-gray-50">
-    <a href="" class="flex flex-col h-full focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[var(--radius)]">
+    <NuxtLink
+      :to="{ name: 'username-slug', params: { username, slug } }"
+      class="flex flex-col h-full focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[var(--radius)]"
+    >
       <CardHeader class="flex-grow px-4 pt-4 pb-2">
         <CardTitle class="line-clamp-2 mb-2 text-sm">
           {{ props.title }}
@@ -30,7 +35,7 @@ const props = defineProps({
       >
         <div class="w-full line-clamp-1">
           <p class="text-xs truncate">
-            @zupaazhai
+            {{ props.username }}
           </p>
         </div>
         <div class="flex space-x-2">
@@ -48,6 +53,6 @@ const props = defineProps({
           </p>
         </div>
       </CardFooter>
-    </a>
+    </NuxtLink>
   </Card>
 </template>
