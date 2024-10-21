@@ -4,7 +4,7 @@ import ScriptCard from '@/components/utils/ScriptCard.vue'
 const props = defineProps({
   title: String,
   items: Array,
-  icon: Object,
+  icon: Function,
 })
 </script>
 
