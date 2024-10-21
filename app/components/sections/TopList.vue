@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
   <section class="w-full">
-    <div class="container mx-auto px-4 md:px-6 max-w-6xl">
+    <div class="container mx-auto px-4 max-w-6xl">
       <div class="flex py-4 items-center">
         <component :is="props.icon" size="24" class="mr-2" />
         <h2 class="font-bold">
