@@ -3,6 +3,9 @@ import TopBar from '@/components/sections/TopBar.vue'
 
 useHead({
   title: 'getsh.me',
+  htmlAttrs: {
+    lang: 'en',
+  },
   meta: [
     {
       name: 'description',

@@ -14,7 +14,7 @@ import {
 <template>
   <header class="w-full border-b">
     <div class="container mx-auto px-4 h-14 flex items-center max-w-6xl">
-      <NuxtLink :to="{ name: 'index' }" class="flex items-center justify-center" href="#">
+      <NuxtLink :to="{ name: 'index' }" class="flex items-center justify-center" aria-label="Home page">
         <Home />
       </NuxtLink>
       <nav class="ml-auto flex gap-4 sm:gap-6">

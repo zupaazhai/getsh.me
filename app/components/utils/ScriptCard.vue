@@ -20,6 +20,7 @@ const props = defineProps({
   <Card class=" hover:bg-gray-50">
     <NuxtLink
       :to="{ name: 'username-slug', params: { username, slug } }"
+      :aria-label="`See detail script ${props.title}`"
       class="flex flex-col h-full focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-[var(--radius)]"
     >
       <CardHeader class="flex-grow px-4 pt-4 pb-2">
