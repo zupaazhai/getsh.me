@@ -28,11 +28,11 @@ const props = defineProps({
           {{ props.title }}
         </CardTitle>
       </CardHeader>
-      <div class="line-clamp-3 text-xs text-gray-400 px-4">
+      <div class="line-clamp-3 text-xs text-gray-500 px-4">
         {{ props.description }}
       </div>
       <CardFooter
-        class="flex justify-between items-center space-x-4 px-4 pb-4 pt-4 text-gray-500"
+        class="flex justify-between items-center space-x-4 px-4 pb-4 pt-4 text-gray-600"
       >
         <div class="w-full line-clamp-1">
           <p class="text-xs truncate">
