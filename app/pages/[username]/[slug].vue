@@ -1,11 +1,12 @@
 <script setup>
-import { UserPen, Github, ScrollText, SquareChevronRight, DollarSign } from 'lucide-vue-next'
+import { UserPen, Github } from 'lucide-vue-next'
 import { scripts } from '@/lib/mock'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
-import { Label } from '@/components/ui/label'
-import { Badge } from '@/components/ui/badge'
+import BashInfo from '@/components/sections/BashInfo.vue'
+import ProgramInScriptInfo from '@/components/sections/ProgramInScriptInfo.vue'
+import SummaryInfo from '@/components/sections/SummaryInfo.vue'
 
 const route = useRoute()
 const bashScript = scripts().find(script => script.slug === route.params.slug)
@@ -54,71 +55,15 @@ const bashScript = scripts().find(script => script.slug === route.params.slug)
 
             <Separator />
 
-            <div id="bash-info" class="flex flex-col space-y-4">
-              <div class="flex items-center space-x-2  w-full">
-                <ScrollText :size="20" />
-                <Label class="font-bold text-left">
-                  Bash Info
-                </Label>
-              </div>
-
-              <div class="">
-                <Label class="text-xs font-bold text-gray-500 mr-2">Created At:</Label>
-                <span class="text-gray-500 text-xs">2024-01-20 12:00</span>
-              </div>
-
-              <div class="grid grid-cols-2 gap-4">
-                <div class="flex flex-col items-center border p-4 rounded-lg">
-                  <p class="font-bold text-xl text-gray-500">
-                    20k
-                  </p>
-                  <Label class="text-gray-400">Download</Label>
-                </div>
-                <div class="flex flex-col items-center border p-4 rounded-lg">
-                  <p class="font-bold text-xl text-gray-500">
-                    20k
-                  </p>
-                  <Label class="text-gray-400">Spark</Label>
-                </div>
-              </div>
-            </div>
+            <BashInfo />
 
             <Separator />
 
-            <div id="bash-info" class="flex flex-col space-y-4">
-              <div class="flex items-center space-x-2  w-full">
-                <DollarSign :size="20" />
-                <Label class="font-bold text-left">
-                  Program in script
-                </Label>
-              </div>
-              <div class="inline-flex space-x-2">
-                <Badge
-                  v-for="program in ['curl', 'glow', 'wget', 'go']"
-                  :key="program"
-                  variant="secondary"
-                  class="text-sm"
-                >
-                  {{ program }}
-                </Badge>
-              </div>
-            </div>
+            <ProgramInScriptInfo />
 
             <Separator />
 
-            <div id="summarize-info" class="flex flex-col space-y-4">
-              <div class="flex items-center space-x-2  w-full">
-                <SquareChevronRight :size="20" />
-                <Label class="font-bold text-left">
-                  Summarize
-                </Label>
-              </div>
-              <div class="inline-flex space-x-2">
-                <p class="text-sm text-gray-500">
-                  This script aim install ubuntu 20.04 with docker and docker-compose. In docker will install nginx, mysql, phpmyadmin, wordpress, and portainer.
-                </p>
-              </div>
-            </div>
+            <SummaryInfo />
           </div>
         </div>
       </div>
