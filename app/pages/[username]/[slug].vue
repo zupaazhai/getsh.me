@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import BashInfo from '@/components/sections/BashInfo.vue'
 import ProgramInScriptInfo from '@/components/sections/ProgramInScriptInfo.vue'
 import SummaryInfo from '@/components/sections/SummaryInfo.vue'
+import InstallScriptCard from '@/components/utils/InstallScriptCard.vue'
 
 const route = useRoute()
 const bashScript = scripts().find(script => script.slug === route.params.slug)
@@ -16,12 +17,16 @@ const bashScript = scripts().find(script => script.slug === route.params.slug)
   <main class="flex-1">
     <section>
       <div class="container mx-auto px-4 max-w-6xl py-12">
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-3 gap-2">
           <!-- Left Column -->
           <div class="col-span-2 space-y-6">
             <h1 class="font-bold text-xl">
               {{ bashScript.title }}
             </h1>
+
+            <div>
+              <InstallScriptCard :install-path="bashScript.path" />
+            </div>
 
             <div class="text-gray-500">
               {{ bashScript.description }}

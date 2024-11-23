@@ -7,6 +7,7 @@ export const scripts = () => {
       downloads: 1000,
       username: '@zupaazhai',
       slug: 'install-docker-with-awesome-dependencies',
+      path: '@zupaazhai/install-docker-with-awesome-dependencies',
     },
     {
       id: 2,
@@ -16,6 +17,7 @@ export const scripts = () => {
       downloads: 900,
       username: '@zupaazhai',
       slug: 'install-nodejs-react-express-postgres-db-and-more-for-rep-stack',
+      path: '@zupaazhai/install-nodejs-react-express-postgres-db-and-more-for-rep-stack',
     },
     {
       id: 3,
@@ -24,6 +26,7 @@ export const scripts = () => {
       downloads: 800,
       username: '@john_doe',
       slug: 'install-nginx',
+      path: '@john_doe/install-nginx',
     },
     {
       id: 4,
@@ -32,6 +35,7 @@ export const scripts = () => {
       downloads: 700,
       username: '@alex2024',
       slug: 'install-mysql',
+      path: '@alex2024/install-mysql',
     },
     {
       id: 5,
@@ -40,6 +44,7 @@ export const scripts = () => {
       downloads: 600,
       username: '@qTys',
       slug: 'install-redis',
+      path: '@qTys/install-redis',
     },
     {
       id: 6,
@@ -48,6 +53,7 @@ export const scripts = () => {
       downloads: 500,
       username: '@zupaazhai',
       slug: 'install-mongodb',
+      path: '@zupaazhai/install-mongodb',
     },
     {
       id: 7,
@@ -56,6 +62,7 @@ export const scripts = () => {
       downloads: 400,
       username: '@98001',
       slug: 'install-postgres',
+      path: '@98001/install-postgres',
     },
     {
       id: 8,
@@ -64,6 +71,7 @@ export const scripts = () => {
       downloads: 300,
       username: '@slack',
       slug: 'install-python',
+      path: '@slack/install-python',
     },
   ]
 }
