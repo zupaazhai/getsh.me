@@ -16,7 +16,7 @@ const props = defineProps({
 })
 
 const curlCmd = computed(() => {
-  return `curl -s ${props.installPath} | sh`
+  return `curl -s getsh.me/${props.installPath} | sh`
 })
 
 const isCopied = ref(false)
