@@ -1,7 +1,8 @@
 <script setup>
-import { ReceiptText, Code } from 'lucide-vue-next'
+import { ReceiptText, Code, Moon, Sun } from 'lucide-vue-next'
 import { scripts } from '@/lib/mock'
 import { Separator } from '@/components/ui/separator'
+import { Button } from '@/components/ui/button/index'
 import BashInfo from '@/components/sections/BashInfo.vue'
 import ProgramInScriptInfo from '@/components/sections/ProgramInScriptInfo.vue'
 import SummaryInfo from '@/components/sections/SummaryInfo.vue'
@@ -12,6 +13,19 @@ import ScriptViewer from '@/components/utils/ScriptViewer.vue'
 
 const route = useRoute()
 const bashScript = scripts().find(script => script.slug === route.params.slug)
+
+const scriptViewerTheme = ref('light')
+const scriptViewerLocalStorageKey = 'script-viewer-theme'
+
+const toggleViwerTheme = () => {
+  scriptViewerTheme.value = scriptViewerTheme.value === 'light' ? 'dark' : 'light'
+  localStorage.setItem(scriptViewerLocalStorageKey, scriptViewerTheme.value)
+}
+
+onMounted(() => {
+  const savedScriptViewerTheme = localStorage.getItem(scriptViewerLocalStorageKey) || 'light'
+  scriptViewerTheme.value = savedScriptViewerTheme
+})
 </script>
 
 <template>
@@ -41,8 +55,20 @@ const bashScript = scripts().find(script => script.slug === route.params.slug)
             <Separator />
 
             <div class="flex flex-col space-y-4">
-              <SectionLabel :icon="Code" title="Script" />
-              <ScriptViewer />
+              <div class="flex items-center justify-center">
+                <SectionLabel :icon="Code" title="Script" />
+                <div>
+                  <Button
+                    size="sm"
+                    :variant="scriptViewerTheme === 'dark' ? 'default' : 'outline'"
+                    @click="toggleViwerTheme"
+                  >
+                    <Moon v-if="scriptViewerTheme === 'dark'" :size="14" />
+                    <Sun v-if="scriptViewerTheme === 'light'" :size="14" />
+                  </Button>
+                </div>
+              </div>
+              <ScriptViewer :theme="scriptViewerTheme" />
             </div>
           </div>
           <!-- Right Column -->
