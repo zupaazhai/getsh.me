@@ -29,6 +29,7 @@
     "@nuxt/eslint-config": "^0.6.2",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "eslint": "^9.15.0",
+    "shiki": "^1.23.1",
     "typescript": "^5.7.2",
     "vue-tsc": "^2.1.10",
     "wrangler": "^3.90.0"

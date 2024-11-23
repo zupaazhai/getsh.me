@@ -5,7 +5,7 @@ import SectionLabel from '@/components/utils/SectionLabel.vue'
 
 <template>
   <div id="summary-info" class="flex flex-col space-y-4">
-    <SectionLabel :icon="SquareChevronRight" title="Summarize" />
+    <SectionLabel :icon="SquareChevronRight" title="Summarize by AI" />
 
     <div class="inline-flex space-x-2">
       <p class="text-sm text-gray-500">
