@@ -1,17 +1,13 @@
 <script setup>
 import { DollarSign } from 'lucide-vue-next'
 import { Badge } from '@/components/ui/badge'
-import { Label } from '@/components/ui/label'
+import SectionLabel from '@/components/utils/SectionLabel.vue'
 </script>
 
 <template>
   <div id="program-in-script-info" class="flex flex-col space-y-4">
-    <div class="flex items-center space-x-2  w-full">
-      <DollarSign :size="20" />
-      <Label class="font-bold text-left">
-        Program in script
-      </Label>
-    </div>
+    <SectionLabel :icon="DollarSign" title="Program in script" />
+
     <div class="inline-flex space-x-2">
       <Badge
         v-for="program in ['curl', 'glow', 'wget', 'go']"

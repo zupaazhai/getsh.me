@@ -1,16 +1,12 @@
 <script setup>
 import { ScrollText } from 'lucide-vue-next'
 import { Label } from '@/components/ui/label'
+import SectionLabel from '@/components/utils/SectionLabel.vue'
 </script>
 
 <template>
   <div id="bash-info" class="flex flex-col space-y-4">
-    <div class="flex items-center space-x-2  w-full">
-      <ScrollText :size="20" />
-      <Label class="font-bold text-left">
-        Bash Info
-      </Label>
-    </div>
+    <SectionLabel :icon="ScrollText" title="Bash Info" />
 
     <div class="">
       <Label class="text-xs font-bold text-gray-500 mr-2">Created At:</Label>
