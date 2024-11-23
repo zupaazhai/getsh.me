@@ -111,7 +111,7 @@ onMounted(() => {
 
 <style lang="postcss">
 .script-viewer.light {
-  @apply bg-gray-100;
+  @apply bg-secondary;
 }
 
 .script-viewer.dark {
@@ -119,7 +119,7 @@ onMounted(() => {
 }
 
 .script-viewer.light pre code.hljs {
-  @apply bg-gray-100 !p-0;
+  @apply bg-secondary !p-0;
 }
 
 .script-viewer.dark pre code.hljs {

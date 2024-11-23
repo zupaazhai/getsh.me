@@ -47,7 +47,7 @@ const onSelectInput = (e) => {
 </script>
 
 <template>
-  <div class="border p-2 bg-gray-100 rounded-lg flex space-x-2">
+  <div class="border p-2 bg-secondary rounded-lg flex space-x-2">
     <Input
       :model-value="curlCmd"
       @click="onSelectInput"
