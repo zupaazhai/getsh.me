@@ -1,12 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // https://nuxt.com/modules
-  modules: [
-    '@nuxthub/core',
-    '@nuxt/eslint',
-    '@nuxtjs/tailwindcss',
-    'shadcn-nuxt',
-  ],
+  modules: ['@nuxthub/core', '@nuxt/eslint', '@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxtjs/supabase'],
 
   // https://devtools.nuxt.com
   devtools: { enabled: true },
@@ -46,5 +41,12 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: './app/components/ui',
+  },
+
+  supabase: {
+    redirectOptions: {
+      login: '/',
+      callback: '/callback',
+    },
   },
 })

@@ -9,6 +9,20 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import UserDropdown from '@/components/utils/UserDropdown.vue'
+
+const supabase = useSupabaseClient()
+const user = useSupabaseUser()
+
+const signInWithGithub = async () => {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: 'github',
+  })
+
+  if (error) {
+    console.error('Failed to sign in with Github', error)
+  }
+}
 </script>
 
 <template>
@@ -19,7 +33,10 @@ import {
       </NuxtLink>
       <nav class="ml-auto flex gap-4 sm:gap-6">
         <ClientOnly>
-          <Dialog>
+          <div v-if="user">
+            <UserDropdown :user="user" />
+          </div>
+          <Dialog v-if="!user">
             <DialogTrigger>
               <Button variant="outline">
                 <Armchair size="18" class="mr-2" /> Login
@@ -32,7 +49,11 @@ import {
 
               <div class="flex flex-col space-y-2 py-4">
                 <div class="w-full">
-                  <Button class="w-full" variant="outline">
+                  <Button
+                    class="w-full"
+                    variant="outline"
+                    @click="signInWithGithub"
+                  >
                     <Github size="20" class="mr-2" /> Login with Github
                   </Button>
                 </div>
