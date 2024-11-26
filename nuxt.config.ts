@@ -8,6 +8,11 @@ export default defineNuxtConfig({
 
   // Env variables - https://nuxt.com/docs/getting-started/configuration#environment-variables-and-private-tokens
   runtimeConfig: {
+    app: {
+      githubLogin: {
+        redirectUri: process.env.GITHUB_LOGIN_REDIRECT_URI,
+      },
+    },
     public: {
       // Can be overridden by NUXT_PUBLIC_HELLO_TEXT environment variable
       helloText: 'Hello from the Edge 👋',
