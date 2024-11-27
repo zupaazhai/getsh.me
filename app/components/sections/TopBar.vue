@@ -17,8 +17,6 @@ const user = useSupabaseUser()
 const signInWithGithub = async () => {
   const config = useRuntimeConfig()
 
-  console.log('redirectUri', config.app.githubLogin.redirectUri)
-
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'github',
     options: {
