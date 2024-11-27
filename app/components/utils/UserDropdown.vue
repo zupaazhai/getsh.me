@@ -28,11 +28,7 @@ const onLogout = async () => {
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger>
-      <div class="flex space-x-2">
-        <div class="flex flex-col items-end">
-          <span class="text-xs font-bold text-gray-600">{{ props.user.user_metadata.full_name }}</span>
-          <span class="text-xs text-gray-400">{{ props.user.user_metadata.user_name }}</span>
-        </div>
+      <div class="flex space-x-2 items-center">
         <Avatar class="w-8 h-8">
           <AvatarImage :src="props.user.user_metadata.avatar_url" />
           <AvatarFallback>{{ createFallbackName(props.user.user_metadata.full_name) }}</AvatarFallback>
@@ -41,6 +37,10 @@ const onLogout = async () => {
     </DropdownMenuTrigger>
     <DropdownMenuContent align="end" class="mt-1">
       <DropdownMenuGroup>
+        <div class="flex flex-col items-start py-2 px-4">
+          <span class="text-xs font-bold text-gray-600">{{ props.user.user_metadata.full_name }}</span>
+          <span class="text-xs text-gray-400">{{ props.user.user_metadata.user_name }}</span>
+        </div>
         <DropdownMenuItem>
           <User class="mr-1 h-4 w-4" />
           <span class="text-xs">Profile</span>

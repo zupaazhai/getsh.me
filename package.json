@@ -16,7 +16,7 @@
     "@nuxthub/core": "^0.7.37",
     "@nuxtjs/supabase": "^1.4.3",
     "@vueuse/core": "^11.3.0",
-    "class-variance-authority": "^0.7.0",
+    "class-variance-authority": "^0.7.1",
     "lucide-vue-next": "^0.453.0",
     "nuxt": "^3.14.1592",
     "radix-vue": "^1.9.10",
@@ -32,7 +32,7 @@
     "eslint": "^9.15.0",
     "typescript": "^5.7.2",
     "vue-tsc": "^2.1.10",
-    "wrangler": "^3.90.0"
+    "wrangler": "^3.91.0"
   },
   "packageManager": "pnpm@9.12.1"
 }

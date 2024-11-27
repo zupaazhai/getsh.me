@@ -1,10 +1,10 @@
 <script setup>
 import { SquareChevronRight } from 'lucide-vue-next'
-import SectionLabel from '@/components/utils/SectionLabel.vue'
+import { SectionWrapper, SectionLabel } from '@/components/ui/section'
 </script>
 
 <template>
-  <div id="summary-info" class="flex flex-col space-y-4">
+  <SectionWrapper id="summary-info">
     <SectionLabel :icon="SquareChevronRight" title="Summarize by AI" />
 
     <div class="inline-flex space-x-2">
@@ -12,5 +12,5 @@ import SectionLabel from '@/components/utils/SectionLabel.vue'
         This script aim install ubuntu 20.04 with docker and docker-compose. In docker will install nginx, mysql, phpmyadmin, wordpress, and portainer.
       </p>
     </div>
-  </div>
+  </SectionWrapper>
 </template>

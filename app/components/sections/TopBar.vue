@@ -1,5 +1,5 @@
 <script setup>
-import { Github, Armchair, Home } from 'lucide-vue-next'
+import { Github, Armchair, Home, Plus } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import {
@@ -38,7 +38,15 @@ const signInWithGithub = async () => {
       </NuxtLink>
       <nav class="ml-auto flex gap-4 sm:gap-6">
         <ClientOnly>
-          <div v-if="user">
+          <div v-if="user" class="flex items-center space-x-2">
+            <Button
+              size="sm"
+              variant="outline"
+              @click="$router.replace({ name: 'create' })"
+            >
+              <Plus :size="14" class="mr-2" />
+              <span>New</span>
+            </Button>
             <UserDropdown :user="user" />
           </div>
           <Dialog v-if="!user">

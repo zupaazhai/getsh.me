@@ -8,7 +8,7 @@ import ProgramInScriptInfo from '@/components/sections/ProgramInScriptInfo.vue'
 import SummaryInfo from '@/components/sections/SummaryInfo.vue'
 import CreatorInfo from '@/components/sections/CreatorInfo.vue'
 import InstallScriptCard from '@/components/utils/InstallScriptCard.vue'
-import SectionLabel from '@/components/utils/SectionLabel.vue'
+import { SectionWrapper, SectionLabel } from '@/components/ui/section'
 import ScriptViewer from '@/components/utils/ScriptViewer.vue'
 
 const route = useRoute()
@@ -45,16 +45,16 @@ onMounted(() => {
 
             <Separator />
 
-            <div class="flex flex-col space-y-4">
+            <SectionWrapper>
               <SectionLabel :icon="ReceiptText" title="Description" />
               <div class="text-gray-500 text-sm">
                 {{ bashScript.description }}
               </div>
-            </div>
+            </SectionWrapper>
 
             <Separator />
 
-            <div class="flex flex-col space-y-4">
+            <SectionWrapper>
               <div class="flex items-center justify-center">
                 <SectionLabel :icon="Code" title="Script" />
                 <div>
@@ -69,7 +69,7 @@ onMounted(() => {
                 </div>
               </div>
               <ScriptViewer :theme="scriptViewerTheme" />
-            </div>
+            </SectionWrapper>
           </div>
           <!-- Right Column -->
           <div class="border border-gray-200 rounded-lg p-4 flex flex-col space-y-4">

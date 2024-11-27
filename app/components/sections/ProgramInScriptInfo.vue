@@ -1,11 +1,11 @@
 <script setup>
 import { DollarSign } from 'lucide-vue-next'
 import { Badge } from '@/components/ui/badge'
-import SectionLabel from '@/components/utils/SectionLabel.vue'
+import { SectionWrapper, SectionLabel } from '@/components/ui/section'
 </script>
 
 <template>
-  <div id="program-in-script-info" class="flex flex-col space-y-4">
+  <SectionWrapper id="program-in-script-info">
     <SectionLabel :icon="DollarSign" title="Program in script" />
 
     <div class="inline-flex space-x-2">
@@ -18,5 +18,5 @@ import SectionLabel from '@/components/utils/SectionLabel.vue'
         {{ program }}
       </Badge>
     </div>
-  </div>
+  </SectionWrapper>
 </template>
